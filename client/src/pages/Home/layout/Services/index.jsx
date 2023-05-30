@@ -8,6 +8,8 @@ import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
 import { deleteService, getAllServices } from "../../../../api/httpsrequests";
 const Services = () => {
   const { id } = useParams();
@@ -87,14 +89,14 @@ const Services = () => {
                         className={style.button}
                         onClick={(e) => handleDelete(service._id)}
                       >
-                        Delete
+                        <DeleteIcon />
                       </button>
                       <button className={style.editButton}>
                         <Link
                           style={{ color: "white" }}
                           to={`/edit/service/${service._id}`}
                         >
-                          Edit
+                          <EditIcon />
                         </Link>
                       </button>
                     </div>
