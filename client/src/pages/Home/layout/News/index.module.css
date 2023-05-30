@@ -1,0 +1,32 @@
+.section {
+  padding: 6rem 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.sectionTop {
+  text-align: center;
+  width: 50%;
+  margin-bottom: 2rem;
+}
+.heading {
+  font-size: 35px;
+  line-height: 38px;
+  font-weight: 300;
+  margin: 1.3rem 0;
+}
+.paragraph {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  margin: 1.3rem 0;
+}
+.heading3 {
+  font-size: 18px;
+  line-height: 19px;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+.paragraph3 {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+}

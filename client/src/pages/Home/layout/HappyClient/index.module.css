@@ -1,0 +1,57 @@
+.section {
+  padding: 3rem 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(125, 185, 232);
+  color: white;
+  width: 100% !important;
+}
+.sectionTop {
+  text-align: center;
+  width: 50%;
+  margin-bottom: 2rem;
+}
+.heading {
+  font-size: 35px;
+  line-height: 38px;
+  font-weight: 300;
+  margin: 1.3rem 0;
+}
+.paragraph {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  margin: 1.3rem 0;
+}
+.card {
+  padding: 1rem;
+  text-align: center;
+  margin: 1rem 0;
+  display: flex;
+  align-items: cenetr;
+}
+.heading3 {
+  font-size: 30px;
+  line-height: 33px;
+  font-weight: 700;
+}
+.paragraph3 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0.6rem 0;
+}
+.cardIcon {
+  font-size: 67px !important;
+  border: 1px solid white;
+  padding: 0.6rem;
+  background-color: rgba(255, 255, 255, 0.672);
+  border-radius: 50%;
+  color: rgb(125, 185, 232);
+  margin-right: 12px;
+}
+@media only screen and (max-width: 990px) {
+  .card {
+    display: flex;
+    justify-content: center;
+  }
+}

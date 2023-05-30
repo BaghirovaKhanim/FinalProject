@@ -1,0 +1,67 @@
+.section {
+  padding: 12rem 0;
+  background-image: url("https://preview.colorlib.com/theme/drimo/drimo/img/banner/server-banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.heading1 {
+  font-size: 50px;
+  line-height: 55px;
+  font-weight: 500;
+  margin: 1.3rem 0;
+}
+.heading2 {
+  font-size: 36px;
+  line-height: 39px;
+  font-weight: 300;
+  margin: 1.3rem 0;
+}
+.paragraph {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  margin: 1.3rem 0;
+}
+.listWrapper {
+  display: flex !important;
+}
+.list {
+  margin-right: 2rem;
+  margin-bottom: 1.5rem !important;
+  list-style: none !important;
+}
+.listItem {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+.listIcon {
+  font-size: 22 px !important;
+  margin-right: 12px;
+}
+.button {
+  padding: 17px 25px;
+  background-color: rgb(252, 90, 26);
+  color: white;
+  border: none;
+  margin-top: 2rem;
+}
+.button2 {
+  padding: 25px 45px;
+  background-color: rgb(252, 90, 26);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 990px) {
+  .image {
+    width: 350px !important;
+  }
+}

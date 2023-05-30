@@ -1,0 +1,10 @@
+.AddSection {
+  padding: 16rem 0;
+}
+.input {
+  display: block !important;
+  margin: 1.3rem !important;
+}
+.button {
+  margin-left: 40% !important;
+}
