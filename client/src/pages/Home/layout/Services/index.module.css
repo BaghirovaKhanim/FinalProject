@@ -50,3 +50,7 @@
   border: none;
   margin-left: 12px;
 }
+.wrapperSort {
+  display: flex !important;
+  align-items: center !important;
+}

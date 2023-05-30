@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid } from "@mui/material";
+import { Button, Container, Grid } from "@mui/material";
 import style from "./index.module.css";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -10,10 +10,12 @@ import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import FilterListIcon from "@mui/icons-material/FilterList";
 import { deleteService, getAllServices } from "../../../../api/httpsrequests";
 const Services = () => {
   const { id } = useParams();
   const [services, setServices] = useState([]);
+  const [isSorted, setIsSorted] = useState(false);
   useEffect(() => {
     getAllServices().then((res) => {
       setServices(res);
@@ -33,31 +35,50 @@ const Services = () => {
       setServices(res);
     });
   }
+  function handleSort() {
+    getAllServices().then(() => {
+      if (!isSorted) {
+        setServices((service) => [
+          ...service.sort((a, b) => b.name.localeCompare(a.name)),
+        ]);
+      } else {
+        setServices(services);
+      }
+      setIsSorted(!isSorted);
+    });
+  }
   return (
     <>
       <section className={style.section}>
         <Container maxWidth="lg">
           {/* Search */}
-          <Paper
-            component="form"
-            sx={{
-              p: "2px 4px",
-              marginBottom: "2rem",
-              display: "flex",
-              alignItems: "center",
-              width: 400,
-            }}
-          >
-            <InputBase
-              sx={{ ml: 1, flex: 1 }}
-              placeholder="Search Services..."
-              onChange={(e) => handleSearch(e)}
-              inputProps={{ "aria-label": "search google maps" }}
-            />
-            <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
-              <SearchIcon />
-            </IconButton>
-          </Paper>
+          <div className={style.wrapperSort}>
+            <Paper
+              component="form"
+              sx={{
+                p: "2px 4px",
+                marginBottom: "2rem",
+                display: "flex",
+                alignItems: "center",
+                width: 400,
+              }}
+            >
+              <InputBase
+                sx={{ ml: 1, flex: 1 }}
+                placeholder="Search Services..."
+                onChange={(e) => handleSearch(e)}
+                inputProps={{ "aria-label": "search google maps" }}
+              />
+              <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
+                <SearchIcon />
+              </IconButton>
+            </Paper>
+            <Button onClick={handleSort}>
+              <FilterListIcon
+                style={{ fontSize: "2rem", marginBottom: "2rem" }}
+              />
+            </Button>
+          </div>
           {/* Card */}
           <div style={{ display: "flex", justifyContent: "center" }}>
             <div className={style.sectionTop}>
